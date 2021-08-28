@@ -1,0 +1,53 @@
+@import './styles/mixins.scss';
+
+.App {
+  text-align: center;
+}
+
+.header {
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid #EBEBEB;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+      color: #A1A1A1;
+      left: 36px;
+      position: absolute;
+      width: 180px;
+      height: 36px;
+      @include font(600,22px,36px);
+  }
+
+  input {
+      position: absolute;
+      width: 240px;
+      height: 36px;
+      right: 40px;
+      padding-left: 40px;
+      border: 1px solid #CCCCCC;
+      border-radius: 6px;
+      background: url(./img/search.svg) no-repeat;
+      background-position: 16.5px;
+      outline: none;
+  }
+
+  input:focus {
+    border: 2px solid #737373;
+  }
+
+  input::placeholder {
+      position: absolute;
+      width: 45px;
+      height: 18px;
+      left: 40px;
+      top: 10px;
+      color: #999999;
+      @include font(normal,14px,18px);
+  }
+}
+
+
