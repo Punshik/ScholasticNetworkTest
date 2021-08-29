@@ -1,0 +1,124 @@
+@import './mixins.scss';
+
+.current-item-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 28px 90px 30px 40px;
+
+    .return-panel{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: auto;
+        height: 38px;
+        margin-bottom: 36px;
+
+        button {
+            width: 84px;
+            height: 32px;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            border-radius: 2px;
+            background-color:  #FFF;
+            color: #333;
+            margin-right: 30px;
+            @include font(500,12px,16px);
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #F2F2F2;
+        }
+
+        span {
+            width: auto;
+            height: 38px;
+            @include font(600,28px,38px);
+        }
+    }
+
+    .item-control {
+        width: 300px;
+        float: left;
+
+        img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            float: left;
+            height: 32px;
+            display: flex;
+            align-items: flex-start;
+            padding: 0;
+
+            #edit-button {
+                width: 66px;
+                height: 32px;
+                color: #fff;
+                border: 0px;
+                background-color: #424242;
+                border-radius: 4px;
+                padding: 0;
+                @include font(500,12px,16px);
+            }
+
+            #edit-button:hover {
+                background-color: #646464;
+                cursor: pointer;
+            }
+
+            #delete-button {
+                width: 32px;
+                height: 32px;
+                border: 0px;
+                margin-left: 12px;
+                background: url(../img/delete.svg) no-repeat center center;
+                padding: 0;
+            }
+
+            #delete-button:hover {
+                background-color: #F2F2F2;
+                border-radius: 4px;
+                cursor: pointer;
+            }  
+        }
+        #current-cost {
+            float: right;
+            @include font(600,20px,auto);
+        }
+    }
+
+    .current-item-about {
+        margin-left: 50px;
+        float: left;
+
+        #current-id {
+            margin-bottom: 18px;
+            color: #666666;
+            text-align: left;
+            @include font(normal,13px,18px);
+        }
+
+        #current-name {
+            width: 400px;
+            text-align: left;
+            color: #000;
+            margin-bottom: 21px;
+            @include font(600,28px,38px);
+        }
+
+        #current-description {
+            width: 720px;
+            word-wrap: break-word;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+            @include font(normal,14px,auto);
+        }
+    }
+
+}

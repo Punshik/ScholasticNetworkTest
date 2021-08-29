@@ -1,0 +1,68 @@
+@import './mixins.scss';
+
+.list-container {
+    margin-top: 28px;
+    width: 100%;
+
+    #label {
+        position: absolute;
+        width: 124px;
+        height: 36px;
+        left: 40px;
+        color: #000;
+        @include font(600,28px,19px);
+    }
+
+    .button-wrapper {
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        height: 32px;
+        top: 118px;
+        right: 40px;
+    }
+
+    .button-group {
+        height: 32px;
+        width: 139px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+
+    .export {
+        background-color: #FFF;
+        margin-right: 14px;
+        @include font(500,12px,auto);
+    }
+
+    .export:hover {
+        cursor: pointer;
+        background-color: #F2F2F2;
+    }
+
+    .create-item {
+        background-color: #424242;
+        border: 2px solid #424242;
+        color: #FFF;
+        @include font(500,12px,auto);
+    }
+
+    .create-item:hover {
+        background-color: #646464;
+        cursor: pointer;
+    }
+
+    .list-wrapper {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        margin-top: 61px;
+    }
+
+    #empty-list {
+        color: #A1A1A1;
+        @include font(bold,50px,auto);
+    }
+
+}
